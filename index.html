@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor HTML V3</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+    <section class="secao1">
+        <div class="secao1-div">
+                    
+            <div class="secao1-div-1">
+                <div class="secao1-div-1-coluna">
+                    <p>Digite aqui seu HTML</p>
+                    <div id='text-var-html' placeholder="Seu HTML"></div>
+                    <p>Digite aqui seu CSS</p>
+                    <div id='text-var-css' placeholder="Seu CSS"></div>
+                </div>
+            </div>
+
+            <div class="secao1-div-2">
+                <div class="secao1-div-2-coluna">
+                    <iframe title="preview-do-codigo" srcdoc='<p>Resultado Aqui...</p>' id='text-preview' sandbox="allow-same-origin" referrerpolicy="no-referrer"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
+    <script>
+        const editorhtml = ace.edit("text-var-html");
+        editorhtml.setTheme("ace/theme/textmate");
+        editorhtml.session.setMode("ace/mode/html");
+
+        const editorcss = ace.edit("text-var-css");
+        editorcss.setTheme("ace/theme/textmate");
+        editorcss.session.setMode("ace/mode/css");
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

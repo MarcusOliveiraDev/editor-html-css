@@ -1,0 +1,41 @@
+<style>
+  div[contenteditable="true"] {
+    background-color: #f2f2f2;
+    width: 500px;
+    height: 300px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+  }
+</style>
+
+<div contenteditable="true" id="text-input"></div>
+
+<script>
+  const div = document.getElementById("text-input");
+
+  div.addEventListener("keydown", function(event) {
+    // Verifica se a tecla pressionada é a tecla de tab
+    if (event.key === "Tab") {
+      event.preventDefault();
+      document.execCommand("insertHTML", false, "&#009");
+    }
+  });
+
+  div.addEventListener("input", function() {
+    // Destacar palavras-chave específicas
+    const keywords = ["HTML", "CSS", "JavaScript"];
+    keywords.forEach(function(keyword) {
+      const regex = new RegExp("\\b" + keyword + "\\b", "g");
+      div.innerHTML = div.innerHTML.replace(regex, `<span style="color: blue;">${keyword}</span>`);
+    });
+
+    // Definir o cursor na posição final do texto
+    const range = document.createRange();
+    range.selectNodeContents(div);
+    range.collapse(false);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  });
+</script>
