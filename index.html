@@ -30,8 +30,10 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ext-language_tools.js"></script>
     <script>
+        ace.require("ace/ext/language_tools");
         const editorhtml = ace.edit("text-var-html");
         editorhtml.setTheme("ace/theme/textmate");
         editorhtml.session.setMode("ace/mode/html");
@@ -39,6 +41,20 @@
         const editorcss = ace.edit("text-var-css");
         editorcss.setTheme("ace/theme/textmate");
         editorcss.session.setMode("ace/mode/css");
+
+        // enable autocompletion and snippets
+        editorhtml.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true,
+            wrap: true
+        });
+        editorcss.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true,
+            wrap: true
+        });
     </script>
     <script src="script.js"></script>
     
