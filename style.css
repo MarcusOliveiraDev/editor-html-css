@@ -11,13 +11,13 @@
 }
 .secao1-div-1{
     display: flex;
-    width: calc(35% - 0px);
+    width: calc(35% - 20px);
     padding: 10px;
 }
 
 .secao1-div-2{
     display: flex;
-    width: calc(65% - 0px);
+    width: calc(65% - 20px);
     padding: 10px;
 }
 .secao1-div-1-coluna, .secao1-div-2-coluna{
