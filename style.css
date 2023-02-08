@@ -1,19 +1,23 @@
 .secao1{
     height: auto;
     width: 100%;
-    background-color: rgb(245, 245, 245);
 }
 .secao1-div{
     display: flex;  
     flex-wrap: wrap;
-    width: 95%;
+    width: 100%;
     margin: auto;
     align-items: center;
-    padding: 60px 10px 60px 10px;
 }
-.secao1-div-1, .secao1-div-2{
+.secao1-div-1{
     display: flex;
-    width: calc(50% - 20px);
+    width: calc(35% - 0px);
+    padding: 10px;
+}
+
+.secao1-div-2{
+    display: flex;
+    width: calc(65% - 0px);
     padding: 10px;
 }
 .secao1-div-1-coluna, .secao1-div-2-coluna{
@@ -33,16 +37,19 @@
 
 
 #text-var-html{
-    height: 25vh; 
+    height: 26vh; 
     width: 100%;
     resize: none; 
+    border: solid 1px black;
     border-radius: 4px; 
     color:black;
 }
+
 #text-var-css{
-    height: 25vh; 
+    height: 26vh; 
     width: 100%;
     resize: none; 
+    border: solid 1px black;
     border-radius: 4px; 
     color:black;
 }
@@ -50,7 +57,7 @@
 
 #text-preview{
     width: 100%;
-    height: 66.5vh;
+    height: 66vh;
     border: solid 1px black;
     border-radius: 4px;
     overflow-y: scroll;
