@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor HTML V3</title>
+    <title>Editor HTML V4</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -16,46 +16,24 @@
                 <div class="secao1-div-1-coluna">
                     <p>Digite aqui seu HTML</p>
                     <div id='text-var-html' placeholder="Seu HTML"></div>
-                    <p>Digite aqui seu CSS</p>
+                    <p style=" margin-top: 15px;">Digite aqui seu CSS</p>
                     <div id='text-var-css' placeholder="Seu CSS"></div>
+                    <p style=" margin-top: 15px;">Digite aqui seu JS</p>
+                    <div id='text-var-js' placeholder="Seu JS"></div>
                 </div>
             </div>
-
+    
             <div class="secao1-div-2">
                 <div class="secao1-div-2-coluna">
-                    <iframe title="preview-do-codigo" srcdoc='<p>Resultado Aqui...</p>' id='text-preview' sandbox="allow-same-origin" referrerpolicy="no-referrer"></iframe>
+                    <iframe title="preview-do-codigo" srcdoc='<p>Resultado Aqui...</p>' id='text-preview' allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write" allowfullscreen="true" allowtransparency="true" sandbox="allow-modals allow-pointer-lock allow-popups allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" referrerpolicy="no-referrer"></iframe>
                 </div>
             </div>
-
+    
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ext-language_tools.js"></script>
-    <script>
-        ace.require("ace/ext/language_tools");
-        const editorhtml = ace.edit("text-var-html");
-        editorhtml.setTheme("ace/theme/textmate");
-        editorhtml.session.setMode("ace/mode/html");
-
-        const editorcss = ace.edit("text-var-css");
-        editorcss.setTheme("ace/theme/textmate");
-        editorcss.session.setMode("ace/mode/css");
-
-        // enable autocompletion and snippets
-        editorhtml.setOptions({
-            enableBasicAutocompletion: true,
-            enableSnippets: true,
-            enableLiveAutocompletion: true,
-            wrap: true
-        });
-        editorcss.setOptions({
-            enableBasicAutocompletion: true,
-            enableSnippets: true,
-            enableLiveAutocompletion: true,
-            wrap: true
-        });
-    </script>
     <script src="script.js"></script>
     
 </body>
