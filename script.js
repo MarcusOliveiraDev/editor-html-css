@@ -63,3 +63,43 @@ function baixar(){
     link.click();
     window.URL.revokeObjectURL(link.href);
 }
+
+//minimizar tela de edicao
+let telahtml = document.getElementById("text-var-html");
+let telacss = document.getElementById("text-var-css");
+let telajs = document.getElementById("text-var-js");
+
+function ftela(){
+    const elementoClicado = event.target;
+
+    if (elementoClicado.id == "telahtml"){
+        if (telahtml.style.display != "none"){
+            telahtml.style.display = "none";
+            elementoClicado.textContent = '+';
+        }else{
+            telahtml.style.display = "block";
+            elementoClicado.textContent = '−';
+        }
+    }
+
+    if (elementoClicado.id == "telacss"){
+        if (telacss.style.display != "none"){
+            telacss.style.display = "none";
+            elementoClicado.textContent = '+';
+        }else{
+            telacss.style.display = "block";
+            elementoClicado.textContent = '−';
+        }
+    }
+
+    if (elementoClicado.id == "telajs"){
+        if (telajs.style.display != "none"){
+            telajs.style.display = "none";
+            elementoClicado.textContent = '+';
+        }else{
+            telajs.style.display = "block";
+            elementoClicado.textContent = '−';
+        }
+    }
+  
+}

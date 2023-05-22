@@ -10,26 +10,29 @@
 <body>
 
     <section class="secao1">
-        <div class="secao1-div">
                     
-            <div class="secao1-div-1">
-                <div class="secao1-div-1-coluna">
+            <div class="secao1-1">
+                <div class="secao1-div-1-codigo">
                     <p>Digite aqui seu HTML</p>
-                    <div id='text-var-html' placeholder="Seu HTML"></div>
-                    <p style=" margin-top: 15px;">Digite aqui seu CSS</p>
-                    <div id='text-var-css' placeholder="Seu CSS"></div>
-                    <p style=" margin-top: 15px;">Digite aqui seu JS</p>
-                    <div id='text-var-js' placeholder="Seu JS"></div>
+                    <abbr title="minimizar"><div class="minimizar" id="telahtml" onclick="ftela()">−</div></abbr>
                 </div>
+                <div id='text-var-html' placeholder="Seu HTML"></div>
+                <div class="secao1-div-1-codigo">
+                    <p>Digite aqui seu CSS</p>
+                    <abbr title="minimizar"><div class="minimizar" id="telacss" onclick="ftela()">−</div></abbr>
+                </div>
+                <div id='text-var-css' placeholder="Seu CSS"></div>
+                <div class="secao1-div-1-codigo">
+                    <p>Digite aqui seu JS</p>
+                    <abbr title="minimizar"><div class="minimizar" id="telajs" onclick="ftela()">−</div></abbr>
+                </div>
+                <div id='text-var-js' placeholder="Seu JS"></div>
             </div>
     
-            <div class="secao1-div-2">
-                <div class="secao1-div-2-coluna">
-                    <iframe title="preview-do-codigo" srcdoc='<p>Resultado Aqui...</p>' id='text-preview' allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write" allowfullscreen="true" allowtransparency="true" sandbox="allow-modals allow-pointer-lock allow-popups allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" referrerpolicy="no-referrer"></iframe>
-                </div>
+            <div class="secao1-2">
+                <iframe title="preview-do-codigo" srcdoc='<p>Resultado Aqui...</p>' id='text-preview' allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write" allowfullscreen="true" allowtransparency="true" sandbox="allow-modals allow-pointer-lock allow-popups allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" referrerpolicy="no-referrer"></iframe>
             </div>
     
-        </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js"></script>
