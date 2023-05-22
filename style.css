@@ -20,7 +20,6 @@
     overflow-x: hidden;
     height: calc(80vh - 20px);
     background-color: white;
-    resize: horizontal;
 }
 .secao1-2{
     display: flex;
