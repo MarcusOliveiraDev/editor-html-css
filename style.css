@@ -20,6 +20,7 @@
     overflow-x: hidden;
     height: calc(80vh - 20px);
     background-color: white;
+    resize: horizontal;
 }
 .secao1-2{
     display: flex;
@@ -30,10 +31,10 @@
 .secao1-div-1-codigo{
     display: flex;
     width: 100%;
-    padding: 4px;
+    padding: 6px 10px;
     background-color: black;
     border-radius: 2px;
-    margin-top: 15px;
+    margin-top: 10px;
     justify-content: space-between;
 }
 .secao1-div-1-codigo:first-child{
@@ -56,6 +57,7 @@
     border: solid 1px black;
     border-radius: 4px; 
     color:black;
+    resize: vertical;
 }
 #text-var-css{
     height: 26vh; 
@@ -64,6 +66,7 @@
     border: solid 1px black;
     border-radius: 4px; 
     color:black;
+    resize: vertical;
 }
 #text-var-js{
     height: 26vh; 
@@ -72,6 +75,7 @@
     border: solid 1px black;
     border-radius: 4px; 
     color:black;
+    resize: vertical;
 }
 #text-preview{
     width: 100%;
