@@ -102,4 +102,30 @@ function ftela(){
         }
     }
   
-}
+};
+
+//almentar iframe
+
+//variaveis para aumentar/diminuir tela
+let aumentartelapreview = document.getElementById("aumentartelapreview");
+
+function previewtelainteira (){
+
+    if( mostrartext.style.position == "absolute" ){
+        mostrartext.style.position = "";
+        mostrartext.style.width = "";
+        mostrartext.style.height = "";
+        aumentartelapreview.style.position = "";
+    }else{
+        mostrartext.style.position = "absolute";
+        mostrartext.style.width = "calc(100vw - 2px)";
+        mostrartext.style.height = "calc(100vh - 2px)";
+        mostrartext.style.left = "0px";
+        mostrartext.style.top = "0px";
+        mostrartext.style.zIndex = "5";
+        aumentartelapreview.style.position = "absolute";
+        aumentartelapreview.style.right = "0px";
+        aumentartelapreview.style.top = "0px";
+    }
+    
+};

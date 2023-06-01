@@ -14,12 +14,23 @@
     width: calc(35% - 20px);
     margin: 5px;
     padding: 5px;
-    border: solid 1px rgba(0,0,0,0.3);
+    /*border: solid 1px rgba(0,0,0,0.3);*/
     border-radius: 4px;
     overflow-y: scroll;
     overflow-x: hidden;
     height: calc(80vh - 20px);
-    background-color: white;
+    /*background-color: white;*/
+    scrollbar-width: 4px;          /* "auto" or "thin" */
+    scrollbar-color: rgba(0,0,0,0.3) rgba(0,0,0,0.05);
+}
+.secao1-1::-webkit-scrollbar{
+    width: 4px;
+}
+.secao1-1::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
+.secao1-1::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
 }
 .secao1-2{
     display: flex;
@@ -83,6 +94,15 @@
     border-radius: 4px;
     overflow-y: scroll;
     background-color: #F2F2F2; 
+}
+#aumentartelapreview{
+    margin-left: -20px;
+    width: 20px;
+    height: 20px;
+    z-index: 6;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
 /*mobile*/
