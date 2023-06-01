@@ -44,17 +44,18 @@ function rodar(){
     vartextcss = editorcss.getValue();
     vartextjs = editorjs.getValue();
 
-    mostrartext.srcdoc = vartexthtml + '<style>'+vartextcss+'</style>' + '<script>'+vartextjs+'</script>';
+    mostrartext.srcdoc = vartexthtml + '<style>'+vartextcss+'</style>' + '<script>'+vartextjs+'<\/script>';
 
-    vartexthtml = document.getElementById("text-var-html");
-    vartextcss = document.getElementById("text-var-css");
-    vartextjs = document.getElementById("text-var-js");
 }
 
 //função baixar o código
 function baixar(){
 
-    mostrartext = document.getElementById("text-preview").contentWindow.document.documentElement.outerHTML;
+    vartexthtml = editorhtml.getValue();
+    vartextcss = editorcss.getValue();
+    vartextjs = editorjs.getValue();
+
+    mostrartext = '<style>'+vartextcss.toString() +'</style>' + vartexthtml.toString() + '<script>'+vartextjs.toString()+'<\/script>';
     
     let htmlblob= new Blob([mostrartext], {type : 'text/html'});
     const link= window.document.createElement('a');
@@ -104,7 +105,7 @@ function ftela(){
   
 };
 
-//almentar iframe
+//aumentar iframe
 
 //variaveis para aumentar/diminuir tela
 let aumentartelapreview = document.getElementById("aumentartelapreview");
@@ -117,13 +118,13 @@ function previewtelainteira (){
         mostrartext.style.height = "";
         aumentartelapreview.style.position = "";
     }else{
-        mostrartext.style.position = "absolute";
+        mostrartext.style.position = "fixed";
         mostrartext.style.width = "calc(100vw - 2px)";
         mostrartext.style.height = "calc(100vh - 2px)";
         mostrartext.style.left = "0px";
         mostrartext.style.top = "0px";
         mostrartext.style.zIndex = "5";
-        aumentartelapreview.style.position = "absolute";
+        aumentartelapreview.style.position = "fixedd";
         aumentartelapreview.style.right = "0px";
         aumentartelapreview.style.top = "0px";
     }
