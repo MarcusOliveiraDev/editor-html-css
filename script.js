@@ -66,7 +66,6 @@ function baixar(){
 }
 
 //copiar codigo
-
 function fcopiar(){
     const elementoClicado = event.target;
 
@@ -112,6 +111,22 @@ function fcopiar(){
     
 }
 
+//formatar codigo
+function fformatar(){
+    const elementoClicado = event.target;
+    const options = { indent_size: 4, space_in_empty_paren: true }
+
+    if(elementoClicado.id == "format-text-var-html"){
+        editorhtml.setValue(html_beautify(editorhtml.getValue(), options));
+    }
+    if(elementoClicado.id == "format-text-var-css"){
+        editorcss.setValue(css_beautify(editorcss.getValue(), options));
+    }
+    if(elementoClicado.id == "format-text-var-js"){
+        editorjs.setValue(js_beautify(editorjs.getValue(), options));
+    }
+}
+
 //minimizar tela de edicao
 let telahtml = document.getElementById("text-var-html");
 let telacss = document.getElementById("text-var-css");
@@ -152,8 +167,29 @@ function ftela(){
   
 };
 
-//aumentar iframe
+//redimensionar tela editores
+const resizeObserverHTML = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      editorhtml.resize();
+    }
+});
+resizeObserverHTML.observe(telahtml);
 
+const resizeObserverCSS = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      editorcss.resize();
+    }
+});
+resizeObserverCSS.observe(telacss);
+
+const resizeObserverJS = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      editorjs.resize();
+    }
+});
+resizeObserverJS.observe(telajs);
+
+//aumentar iframe
 //variaveis para aumentar/diminuir tela
 let aumentartelapreview = document.getElementById("aumentartelapreview");
 

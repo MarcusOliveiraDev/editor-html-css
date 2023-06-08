@@ -17,7 +17,7 @@
                     <p>Digite aqui seu HTML</p>
                     <div class="nav-icones">
                         <span title="copiar" id="copy-text-var-html" onclick="fcopiar()" class="material-symbols-outlined icones">content_copy</span>
-                        <span title="formatar" class="material-symbols-outlined icones">reorder</span>
+                        <span id="format-text-var-html" title="formatar" onclick="fformatar()" class="material-symbols-outlined icones">reorder</span>
                         <span id="telahtml" title="minimizar" onclick="ftela()" class="material-symbols-outlined icones">remove</span>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <p>Digite aqui seu CSS</p>
                     <div class="nav-icones">
                         <span title="copiar" id="copy-text-var-css" onclick="fcopiar()" class="material-symbols-outlined icones">content_copy</span>
-                        <span class="material-symbols-outlined icones">reorder</span>
+                        <span id="format-text-var-css" title="formatar" onclick="fformatar()" class="material-symbols-outlined icones">reorder</span>
                         <span id="telacss" title="minimizar" onclick="ftela()" class="material-symbols-outlined icones">remove</span>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                     <p>Digite aqui seu JS</p>
                     <div class="nav-icones">
                         <span title="copiar" id="copy-text-var-js" onclick="fcopiar()" class="material-symbols-outlined icones">content_copy</span>
-                        <span class="material-symbols-outlined icones">reorder</span>
+                        <span id="format-text-var-js" title="formatar" onclick="fformatar()" class="material-symbols-outlined icones">reorder</span>
                         <span id="telajs" title="minimizar" onclick="ftela()" class="material-symbols-outlined icones">remove</span>
                     </div>
                 </div>
@@ -48,6 +48,10 @@
             </div>
     
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-html.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ext-language_tools.js"></script>
