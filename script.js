@@ -65,6 +65,53 @@ function baixar(){
     window.URL.revokeObjectURL(link.href);
 }
 
+//copiar codigo
+
+function fcopiar(){
+    const elementoClicado = event.target;
+
+    if(elementoClicado.id == "copy-text-var-html"){
+        if(editorhtml.getSelectedText() == ""){
+            navigator.clipboard.writeText(editorhtml.getValue());
+        }else{
+            navigator.clipboard.writeText(editorhtml.getSelectedText());
+        }
+    }
+
+    if(elementoClicado.id == "copy-text-var-css"){
+        if(editorcss.getSelectedText() == ""){
+            navigator.clipboard.writeText(editorcss.getValue());
+        }else{
+            navigator.clipboard.writeText(editorcss.getSelectedText());
+        }
+    }
+
+    if(elementoClicado.id == "copy-text-var-js"){
+        if(editorjs.getSelectedText() == ""){
+            navigator.clipboard.writeText(editorjs.getValue());
+        }else{
+            navigator.clipboard.writeText(editorjs.getSelectedText());
+        }
+    }
+
+    const notification = document.createElement('div');
+    notification.classList.add('notification');
+    notification.innerText = 'código copiado';
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.classList.add('show');
+        setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+        }, 2000);
+    }, 100);
+    
+}
+
 //minimizar tela de edicao
 let telahtml = document.getElementById("text-var-html");
 let telacss = document.getElementById("text-var-css");
@@ -76,30 +123,30 @@ function ftela(){
     if (elementoClicado.id == "telahtml"){
         if (telahtml.style.display != "none"){
             telahtml.style.display = "none";
-            elementoClicado.textContent = '+';
+            elementoClicado.textContent = 'add';
         }else{
             telahtml.style.display = "block";
-            elementoClicado.textContent = '−';
+            elementoClicado.textContent = 'remove';
         }
     }
 
     if (elementoClicado.id == "telacss"){
         if (telacss.style.display != "none"){
             telacss.style.display = "none";
-            elementoClicado.textContent = '+';
+            elementoClicado.textContent = 'add';
         }else{
             telacss.style.display = "block";
-            elementoClicado.textContent = '−';
+            elementoClicado.textContent = 'remove';
         }
     }
 
     if (elementoClicado.id == "telajs"){
         if (telajs.style.display != "none"){
             telajs.style.display = "none";
-            elementoClicado.textContent = '+';
+            elementoClicado.textContent = 'add';
         }else{
             telajs.style.display = "block";
-            elementoClicado.textContent = '−';
+            elementoClicado.textContent = 'remove';
         }
     }
   
@@ -112,7 +159,7 @@ let aumentartelapreview = document.getElementById("aumentartelapreview");
 
 function previewtelainteira (){
 
-    if( mostrartext.style.position == "absolute" ){
+    if( mostrartext.style.position == "fixed" ){
         mostrartext.style.position = "";
         mostrartext.style.width = "";
         mostrartext.style.height = "";
@@ -124,7 +171,7 @@ function previewtelainteira (){
         mostrartext.style.left = "0px";
         mostrartext.style.top = "0px";
         mostrartext.style.zIndex = "5";
-        aumentartelapreview.style.position = "fixedd";
+        aumentartelapreview.style.position = "fixed";
         aumentartelapreview.style.right = "0px";
         aumentartelapreview.style.top = "0px";
     }
